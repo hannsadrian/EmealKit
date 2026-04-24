@@ -84,7 +84,7 @@ struct OpeningHoursScraper {
                 
                 // Extract cell contents
                 let area = try cells[0].text()
-                    .replacingOccurrences(of: "Öffnungszeit", with: "") // for Neue Mensa times
+                    .replacingOccurrences(of: "Öffnungszeit ", with: "") // for Neue Mensa times
                     .trimmingCharacters(in: .whitespaces)
                 let dateRangeText = try cells[1].text().trimmingCharacters(in: .whitespaces)
                 let hoursText = try cells[2].text()
